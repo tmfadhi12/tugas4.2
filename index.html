@@ -148,6 +148,7 @@
 							<li><a href="#page-1">Peran</a></li>
 							<li><a href="#page-2">Pencapaian</a></li>
 							<li><a href="#page-3">Web Scrapping 6.2</a></li>
+							<li><a href="#page-4">Web Scrapping 6.3</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -211,10 +212,10 @@
 										$.getJSON('./LatestNews.json', function (data) {
 											for (let index = 0; index < data.length; index++) {
 												json += '<tr>'
-												json += '<td>'+ data[index].id +'</td>'
-												json += '<td>'+ data[index].subtitle +'</td>'
-												json += '<td>'+ data[index].judul +'</td>'
-												json += '<td>'+ data[index].date +'</td>'
+												json += '<td>' + data[index].id + '</td>'
+												json += '<td>' + data[index].subtitle + '</td>'
+												json += '<td>' + data[index].judul + '</td>'
+												json += '<td>' + data[index].date + '</td>'
 												json += '</tr>'
 											}
 											$("table#webscrape").append(json)
@@ -224,16 +225,38 @@
 							</tbody>
 						</table>
 					</div>
-					<!--<div id="page-4" class="page bg-light four">
-						<h2 class="heading">Dedication</h2>
-						<p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it
-							would have been rewritten a thousand times and everything that was left from its origin
-							would be the word "and" and the Little Blind Text should turn around and return to its own,
-							safe country. But nothing the copy said could convince her and so it didn’t take long until
-							a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged
-							her into their agency, where they abused her for their.</p>
+					<div id="page-4" class="page bg-light four">
+						<h2 class="heading">Web Scrapping 6.3</h2>
+						<table id="webscrape2" class="table table-bordered text-center">
+							<thead>
+								<tr>
+									<th>Image</th>
+									<th>Movie Title</th>
+									<th>Velocity</th>
+									<th>Rating</th>
+								</tr>
+							</thead>
+							<tbody class="scrap">
+								<script type="text/javascript">
+									$(function () {
+										movie = '';
+										$.getJSON('./res.json', function (data) {
+											for (let index = 0; index < data.length; index++) {
+												movie += '<tr>'
+												movie += '<td>' + '<img src="'+ data[index].Image +'">' + '</td>'
+												movie += '<td>' + data[index]["Movie Title (Years Launched)"] + '</td>'
+												movie += '<td>' + data[index].Velocity + '</td>'
+												movie += '<td>' + data[index].Rating + '</td>'
+												movie += '</tr>'
+											}
+											$("table#webscrape2").append(movie)
+										})
+									});
+								</script>
+							</tbody>
+						</table>
 					</div>
-					<div id="page-5" class="page bg-light five">
+					<!--<div id="page-5" class="page bg-light five">
 						<h2 class="heading">Foreword</h2>
 						<p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it
 							would have been rewritten a thousand times and everything that was left from its origin
