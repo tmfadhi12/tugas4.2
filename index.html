@@ -207,21 +207,17 @@
 							<tbody class="scrap">
 								<script type="text/javascript">
 									$(function () {
+										json = '';
 										$.getJSON('LatestNews.json', function (data) {
-											var student = '';
-											$.each(data, function (i, emp) {
-												student += '<tr>';
-												student += '<td>' + emp.id + '</td>';
-
-												student += '<td>' + emp.subtitle + '</td>';
-
-												student += '<td>' + emp.judul + '</td>';
-
-												student += '<td>' + emp.date + '</td>';
-
-												student += '</tr>';
-												$('table#webscrape').append(student);
-											});
+											for (let index = 0; index < data.length; index++) {
+												json += '<tr>'
+												json += '<td>'+ data[index].id +'</td>'
+												json += '<td>'+ data[index].subtitle +'</td>'
+												json += '<td>'+ data[index].judul +'</td>'
+												json += '<td>'+ data[index].date +'</td>'
+												json += '</tr>'
+											}
+											$("table#webscrape").append(json)
 										})
 									});
 								</script>
