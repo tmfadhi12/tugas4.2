@@ -231,25 +231,25 @@
 							<thead>
 								<tr>
 									<th>Image</th>
-									<th>Movie Title</th>
-									<th>Velocity</th>
-									<th>Rating</th>
+									<th>Youtuber Name</th>
+									<th>Category</th>
+									<th>Subscriber</th>
 								</tr>
 							</thead>
 							<tbody class="scrap">
 								<script type="text/javascript">
 									$(function () {
-										movie = '';
-										$.getJSON('./res.json', function (data) {
+										youtuber = '';
+										$.getJSON('./ytber.json', function (data) {
 											for (let index = 0; index < data.length; index++) {
-												movie += '<tr>'
-												movie += '<td>' + '<img src="'+ data[index].Image +'">' + '</td>'
-												movie += '<td>' + data[index]["Movie Title (Years Launched)"] + '</td>'
-												movie += '<td>' + data[index].Velocity + '</td>'
-												movie += '<td>' + data[index].Rating + '</td>'
-												movie += '</tr>'
+												youtuber += '<tr>'
+												youtuber += '<td>' + '<img src="'+ data[index].img +'">' + '</td>'
+												youtuber += '<td>' + data[index]["name"] + '</td>'
+												youtuber += '<td>' + data[index].category + '</td>'
+												youtuber += '<td>' + data[index].subs + '</td>'
+												youtuber += '</tr>'
 											}
-											$("table#webscrape2").append(movie)
+											$("table#webscrape2").append(youtuber)
 										})
 									});
 								</script>
