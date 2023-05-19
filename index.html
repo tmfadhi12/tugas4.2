@@ -149,6 +149,7 @@
 							<li><a href="#page-2">Pencapaian</a></li>
 							<li><a href="#page-3">Web Scrapping 6.2</a></li>
 							<li><a href="#page-4">Web Scrapping 6.3</a></li>
+							<li><a href="#page-5">Visualisasi Data LPSE</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -243,7 +244,7 @@
 										$.getJSON('./ytber.json', function (data) {
 											for (let index = 0; index < data.length; index++) {
 												youtuber += '<tr>'
-												youtuber += '<td>' + '<img src="'+ data[index].img +'">' + '</td>'
+												youtuber += '<td>' + '<img src="' + data[index].img + '">' + '</td>'
 												youtuber += '<td>' + data[index]["name"] + '</td>'
 												youtuber += '<td>' + data[index].category + '</td>'
 												youtuber += '<td>' + data[index].subs + '</td>'
@@ -256,16 +257,13 @@
 							</tbody>
 						</table>
 					</div>
-					<!--<div id="page-5" class="page bg-light five">
-						<h2 class="heading">Foreword</h2>
-						<p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it
-							would have been rewritten a thousand times and everything that was left from its origin
-							would be the word "and" and the Little Blind Text should turn around and return to its own,
-							safe country. But nothing the copy said could convince her and so it didn’t take long until
-							a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged
-							her into their agency, where they abused her for their.</p>
+					<div id="page-5" class="page bg-light five">
+						<h2 class="heading">Visualisasi Data LPSE</h2>
+						<div>
+							<iframe title="proyek1" width="800" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=c2cfa353-ce68-405c-834e-8735371d47b1&autoAuth=true&ctid=98374cd7-c8b8-413c-8476-b8722ae7e8e8" frameborder="0" allowFullScreen="true"></iframe>
+						</div>
 					</div>
-					<div id="page-6" class="page bg-light six">
+					<!--<div id="page-6" class="page bg-light six">
 						<h2 class="heading">Prologue</h2>
 						<p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it
 							would have been rewritten a thousand times and everything that was left from its origin
@@ -737,12 +735,6 @@
 				width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
 				referrerpolicy="no-referrer-when-downgrade"></iframe>
 			<!-- <div class="img" style="background-image: url(images/about.jpg);"></div> -->
-		</div>
-		<div class="row no-gutters block-9 mb-5 mx-5">
-			<div id="powerbi" ></div>
-			<iframe title="proyek1" width="1140" height="541.25" 
-			src="https://app.powerbi.com/reportEmbed?reportId=15ddcb42-5d08-4bd0-8464-82347677b640&autoAuth=true&ctid=98374cd7-c8b8-413c-8476-b8722ae7e8e8" 
-			frameborder="0" allowFullScreen="true"></iframe>
 		</div>
 		</div>
 		</div>
